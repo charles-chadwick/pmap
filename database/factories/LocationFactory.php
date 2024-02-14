@@ -17,7 +17,11 @@ class LocationFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            "name" => "Honey Latte Cafe",
+            "address" => "1033 SE Main St",
+            "city" => "Portland",
+            "state" => "OR",
+            "zip" => "97214"
         ];
     }
 }

@@ -17,6 +17,10 @@ class Tag extends Model
         "notes"
     ];
 
+    public function locations() {
+        return $this->morphedByMany(Location::class, "taggable");
+    }
+
     public function taggable() {
         return $this->morphTo();
     }

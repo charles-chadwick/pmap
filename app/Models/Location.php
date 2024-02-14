@@ -13,4 +13,9 @@ class Location extends Model
     public $fillable = [
         "name"
     ];
+
+    public function tags()
+    {
+        return $this->morphToMany(Tag::class, "taggable");
+    }
 }

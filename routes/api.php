@@ -20,3 +20,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::resource("tags", TagController::class)->only(["index", "show", "create", "store", "destroy"]);
+Route::resource("locations", TagController::class)->only(["index", "show", "create", "store", "destroy"]);
