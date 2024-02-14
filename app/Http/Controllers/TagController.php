@@ -13,15 +13,7 @@ class TagController extends Controller
      */
     public function index()
     {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
+        return Tag::get();
     }
 
     /**
@@ -29,7 +21,7 @@ class TagController extends Controller
      */
     public function store(StoreTagRequest $request)
     {
-        //
+        return Tag::create($request->all());
     }
 
     /**
@@ -37,15 +29,7 @@ class TagController extends Controller
      */
     public function show(Tag $tag)
     {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Tag $tag)
-    {
-        //
+        return $tag;
     }
 
     /**
@@ -53,7 +37,7 @@ class TagController extends Controller
      */
     public function update(UpdateTagRequest $request, Tag $tag)
     {
-        //
+        return $tag->update($request->all());
     }
 
     /**
@@ -61,6 +45,6 @@ class TagController extends Controller
      */
     public function destroy(Tag $tag)
     {
-        //
+        return $tag->delete();
     }
 }

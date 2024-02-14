@@ -11,7 +11,7 @@ class StoreTagRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,9 @@ class StoreTagRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            "type" => "required|max:255",
+            "name" => "required|max:255",
+            "value" => "required"
         ];
     }
 }
